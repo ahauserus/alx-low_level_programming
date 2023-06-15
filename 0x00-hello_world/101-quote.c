@@ -11,7 +11,8 @@ int main(void)
 	char *string;
 
 	string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int bytes_written	 = write(2, string, strlen(string));
+
+	write(2, string, strlen(string));
 
 	return (1);
 }
