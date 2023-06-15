@@ -1,4 +1,4 @@
-## lx-low_level_programming
+## alx-low_level_programming
 ___
 ```
 Allowed editors: vi, vim, emacs
