@@ -12,7 +12,7 @@ int main(void)
 
 	string = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(2, string, sizeof(string) - 1);
+	write(2, string, sizeof(string));
 
 	return (1);
 }
