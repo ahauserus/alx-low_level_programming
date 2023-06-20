@@ -7,7 +7,7 @@
  * Return: The first 50 fib numbers
  */
 
-int fib(int n)
+int fib(long int n)
 {
 	if (n <= 1)
 		return (n);
