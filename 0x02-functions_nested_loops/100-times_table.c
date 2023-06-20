@@ -20,7 +20,6 @@ void print_times_table(int n)
 
 			if (col == 0)
 				_putchar('0');
-
 			else if (product < 10)
 			{
 				_putchar(44);
@@ -29,7 +28,6 @@ void print_times_table(int n)
 				_putchar(32);
 				_putchar(product + '0');
 			}
-
 			else if (product < 100)
 			{
 				_putchar(44);
@@ -49,5 +47,4 @@ void print_times_table(int n)
 		}
 		_putchar(10);
 	}
-
 }
