@@ -1,41 +1,37 @@
 #include <stdio.h>
 
 /**
- * fib - prints the first 50 fib numbers, starting with 1 and 2
- * @n: number of fib numbers to print
+ * fib - Prints the Fibonacci sequence up to n
+ * @n: The number of Fibonacci numbers
  *
- * Return: The first 50 fib numbers
+ * Return: The fibonacci sequence
  */
 
-int fib(long int n)
-{
-	if (n <= 1)
-		return (n);
 
-	return (fib(n - 1) + fib(n - 2));
+int fib(int n)
+{
+	if (n == 0)
+		return (0);
+	else if (n == 1)
+		return (1);
+	else
+		return (fib(n - 1) + fib(n - 2));
 }
 
 /**
- * main - Checks fib
+ * main -checks fib
  *
  * Return: Always 0
  */
 
+
 int main(void)
 {
-	int n = 50, i, temp;
+	int i;
 
-	temp = n + 1;
+	for (i = 1; i <= 56; i++)
+		printf("%d, ", fib(i) - 1);
 
-	for (i = 2; i <= temp; i++)
-	{
-		if (i != temp)
-			printf("%d, ", fib(i));
-		else
-			printf("%d", fib(i));
-	}
-
-	putchar('\n');
-
+	printf("\n");
 	return (0);
 }
