@@ -23,7 +23,7 @@ int fib(int n)
 
 int main(void)
 {
-	int n = 20, i, temp;
+	int n = 50, i, temp;
 
 	temp = n + 1;
 
