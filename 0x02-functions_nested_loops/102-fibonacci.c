@@ -1,25 +1,8 @@
 #include <stdio.h>
 
-/**
- * fib - Prints the Fibonacci sequence up to n
- * @n: The number of Fibonacci numbers
- *
- * Return: The fibonacci sequence
- */
-
-
-int fib(int n)
-{
-	if (n == 0)
-		return (0);
-	else if (n == 1)
-		return (1);
-	else
-		return (fib(n - 1) + fib(n - 2));
-}
 
 /**
- * main -checks fib
+ * main - Prints the first 50 Fibonacci numbers, starting with 1 and 2
  *
  * Return: Always 0
  */
@@ -28,10 +11,19 @@ int fib(int n)
 int main(void)
 {
 	int i;
+	unsigned long current = 0, next = 1, sum = 0;
 
-	for (i = 1; i <= 56; i++)
-		printf("%d, ", fib(i) - 1);
+	for (i = 0; i < 50; i++)
+	{
+		sum = current + next;
+		printf("%lu", sum);
 
+		if (i != 49)
+			printf(", ");
+		current = next;
+		next = sum;
+	}
 	printf("\n");
+
 	return (0);
 }
