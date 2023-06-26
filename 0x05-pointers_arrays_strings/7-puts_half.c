@@ -1,43 +1,22 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * puts_half - prints the second half of the string
+ * puts_half - prints the second half of a string
  * @str: string to be printed
  */
 
 void puts_half(char *str)
 {
-	int i = 0, len = _strlen(str);
+	int i = 0, j = 0, n = _strlen(str);
 
-	if (len % 2 == 0)
-	{
-		for (i = len / 2; i < len; i++)
-			_putchar(*(str + i));
-		_putchar('\n');
-	}
-	else
-	{
-		for (i = (len - 1) / 2; i < len; i++)
-			_putchar(*(str + i));
-		_putchar('\n');
-	}
-}
+	if (n % 2 != 0)
+		j += 1;
+
+	for (i = (n + j) / 2; i < n; i++)
+		_putchar(*(str + i));
 
 
-/**
- * _strlen - returns the length of a string
- * @s: string to be checked
- *
- * Return: the length of the string
- */
+	_putchar('\n');
 
-int _strlen(char *s)
-{
-	unsigned int len = 0;
-	int i;
-
-	for (i = 0; *(s + i) != '\0'; i++)
-		len += sizeof(char);
-
-	return (len);
 }
