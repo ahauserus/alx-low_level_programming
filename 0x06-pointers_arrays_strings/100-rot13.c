@@ -11,8 +11,8 @@ char *rot13(char *str)
 {
 	int i, j;
 
-	char enc[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
-	char dec[] = "nNpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+	char enc[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char dec[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; *(str + i); i++)
 	{
@@ -20,8 +20,8 @@ char *rot13(char *str)
 		{
 			if (enc[j] == *(str + i))
 			{
-				*(str + i) = *(dec + j);
-				break;
+				*(str + i) = dec[j];
+					break;
 			}
 		}
 	}
