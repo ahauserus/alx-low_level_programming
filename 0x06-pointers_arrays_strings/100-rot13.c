@@ -19,8 +19,10 @@ char *rot13(char *str)
 		for (j = 0; j < 52; j++)
 		{
 			if (enc[j] == *(str + i))
+			{
 				*(str + i) = *(dec + j);
-			break;
+				break;
+			}
 		}
 	}
 
