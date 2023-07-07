@@ -17,13 +17,7 @@ int main(int argc, char *argv[])
 	int amnt = atoi(argv[1]), coins[5] = {25, 10, 5, 2, 1};
 	int i = 0, count = 0, ln = sizeof(coins) / sizeof(coins[0]);
 
-	if (argc == 1)
-	{
-		printf("0\n");
-		return (1);
-	}
-
-	else if (argc == 2 && amnt >= 0)
+	if (argc == 2 && amnt >= 0)
 	{
 		for (i = 0; i < ln; i++)
 		{
@@ -32,6 +26,9 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", count);
 	}
+
+	else if (argc == 2 && amnt < 0)
+		printf("0\n");
 
 	else
 	{
