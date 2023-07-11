@@ -73,7 +73,11 @@ char **strtow(char *str)
 	if (words == 0)
 		return (NULL);
 
-	string = malloc(words + 1);
+	string = malloc(sizeof(char *) * (words + 1));
+
+	if (string == NULL)
+		return (NULL);
+
 	for (w = 0; w < words; w++)
 	{
 		while (str[i] == ' ')
