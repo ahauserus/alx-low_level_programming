@@ -1,7 +1,28 @@
 #include <stdlib.h>
 #include "main.h"
-#include "2-strlen.c"
 
+int _len(char *str);
+int argc(char *str);
+
+/**
+ * _len - returns the length of a string
+ * @str: string to be checked
+ *
+ * Return: the length of the string
+ */
+
+int _len(char *str)
+{
+	int i = 0, length = 0;
+
+	while (str[i] != '\0' && str[i] != ' ')
+	{
+		length++;
+		i++;
+	}
+
+	return (length);
+}
 
 /**
  * argc - count the number of arguments passed
@@ -12,14 +33,17 @@
 
 int argc(char *str)
 {
-	int i = 0, args = 0;
+	int i = 0, args = 0, len = 0;
 
-	for (; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
+		len++;
+
+	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ')
 		{
 			args++;
-			i += _strlen(str + i);
+			i += _len(str + i);
 		}
 	}
 
@@ -53,7 +77,7 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		chr = _strlen(str + i);
+		chr = _len(str + i);
 		string[w] = malloc(chr + 1);
 
 		if (string[w] == NULL)
