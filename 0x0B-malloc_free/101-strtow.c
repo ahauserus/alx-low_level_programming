@@ -3,6 +3,7 @@
 
 int _len(char *str);
 int argc(char *str);
+char **strtow(char *str);
 
 /**
  * _len - returns the length of a string
@@ -68,10 +69,11 @@ char **strtow(char *str)
 
 	words = argc(str);
 
-	string = malloc(words + 1);
-	if (string == NULL)
+
+	if (words == 0)
 		return (NULL);
 
+	string = malloc(words + 1);
 	for (w = 0; w < words; w++)
 	{
 		while (str[i] == ' ')
