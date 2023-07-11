@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include "2-strlen.c"
 
 /**
  * argstostr - concatenates all the arguments into a string
