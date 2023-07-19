@@ -8,8 +8,6 @@
  *
  * @op: The operator
  * @f: The function associated
- * @a: The first integer
- * @b: The second integer
  */
 
 typedef struct op
